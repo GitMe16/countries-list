@@ -1,10 +1,11 @@
 import React from 'react'
+import { Page } from 'components'
 
 const Error404: React.FunctionComponent = () => {
   return (
-    <div>
+    <Page title="Error 404">
       This is Error 404 page
-    </div>
+    </Page>
   )
 }
 

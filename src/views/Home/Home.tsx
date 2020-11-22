@@ -1,10 +1,11 @@
 import React from 'react'
+import { Page } from 'components'
 
 const Home: React.FunctionComponent = () => {
   return (
-    <div>
-      This is the Home Page
-    </div>
+    <Page title="Home">
+      <div>This is the Home Page</div>
+    </Page>
   )
 }
 
