@@ -4,17 +4,20 @@ import { Helmet } from 'react-helmet'
 interface Props {
   children: React.ReactNode
   title?: string
+  className?: string
 }
 
 const Page: React.FunctionComponent<Props> = (props: Props) => {
-  const { children, title } = props
+  const { children, className, title } = props
 
   return (
     <Fragment>
       <Helmet>
         <title>{`${title} - Countries List` || 'Countries List'}</title>
       </Helmet>
-      {children}
+      <div className={className}>
+        {children}
+      </div>
     </Fragment>
   )
 }

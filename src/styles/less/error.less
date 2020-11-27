@@ -1,0 +1,42 @@
+.error {
+  .img {
+    width: 24rem;
+    display: block;
+    margin: 0px auto;
+    @media (max-width: 599px) {
+      width: 16rem;
+    }
+  }
+  .error-block {
+    margin: 0.4rem 0 2.4rem;
+    .title {
+      font-weight: 600;
+      text-align: center;
+      font-size: 1.8rem;
+      margin: 0px 0px 1rem;
+      @media (max-width: 599px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .description {
+      font-weight: 300;
+      text-align: center;
+      line-height: 1.8rem;
+      font-size: 1rem;
+      @media (max-width: 599px) {
+        line-height: 1.4rem;
+        font-size: 0.8rem;
+      }
+    }  
+  }
+  .btn {
+    min-width: 10.4rem;
+  }
+  @media (min-width: 600px) and (max-width: 959px) {
+    padding: 0 10%;
+  }
+  @media (max-width: 599px) {
+    padding: 0 20px;
+  }
+}

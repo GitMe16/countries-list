@@ -28,3 +28,7 @@ export const Paths: {[index: string]: PathItem} = {
     component: Error404
   },
 }
+
+export const URLS = {
+  Home: '/',
+}

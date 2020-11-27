@@ -2,6 +2,8 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { PathItem, Paths } from 'constants/routes'
 
+import 'styles/css/app.css'
+
 const App: React.FunctionComponent<any> = () => {
   const routes = Object.values(Paths)
   return (

@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
     "target": "es5",
     "lib": [
       "dom",
@@ -22,6 +24,7 @@
     "baseUrl": "./src"
   },
   "include": [
-    "src"
+    "src",
+    "custom.d.ts"
   ]
 }

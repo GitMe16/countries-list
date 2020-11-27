@@ -1,0 +1,28 @@
+@primary-color: @cyan-4; // primary color for all components
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.fullWidth {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  &.main {
+    background-color: @cyan-4;
+    color: white;
+    padding: 8px 20px,
+  }
+  &.big {
+    min-height: 2.8rem;
+    min-width: 8.6rem;
+  }
+}
