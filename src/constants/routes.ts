@@ -1,6 +1,4 @@
-import Country from 'views/Country'
-import Error404 from 'views/Error404'
-import Home from 'views/Home'
+import React, { lazy } from 'react'
 
 export interface PathItem {
   label: string
@@ -14,18 +12,18 @@ export const Paths: {[index: string]: PathItem} = {
     label: 'home',
     path: '/',
     title: 'Home',
-    component: Home,
+    component: lazy(() => import('views/Home')),
   },
   Country: {
     label: 'country',
     path: '/country/:search',
     title: 'Country',
-    component: Country,
+    component: lazy(() => import('views/Country')),
   },
   Error404: {
     label: 'error-404',
     title: 'Error 404',
-    component: Error404
+    component: lazy(() => import('views/Error404')),
   },
 }
 

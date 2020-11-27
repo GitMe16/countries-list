@@ -1,5 +1,5 @@
 import { Button, Typography } from 'antd'
-import Error404Png from 'assets/graphic/Error404.png'
+import Error404Png from 'assets/images/graphic/Error404.png'
 import { URLS } from 'constants/routes'
 import { Page } from 'components'
 import React from 'react'

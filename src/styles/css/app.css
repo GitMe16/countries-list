@@ -2239,6 +2239,8 @@ html {
   padding: 4px 15px;
   font-size: 14px;
   border-radius: 2px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.85);
   background: #fff;
   border-color: #d9d9d9;
@@ -24653,6 +24655,26 @@ div.ant-typography-edit-content.ant-typography-rtl {
   margin: 8px 0 0;
   padding: 0;
 }
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/fonts/Quicksand/Quicksand-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/fonts/Quicksand/Quicksand-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/fonts/Quicksand/Quicksand-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(assets/fonts/Quicksand/Quicksand-Bold.ttf);
+  font-weight: 700;
+}
 html,
 body {
   width: 100%;
@@ -24660,17 +24682,37 @@ body {
   padding: 0px;
   margin: 0px;
 }
+#root {
+  width: 100%;
+  height: 100%;
+}
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title,
+h6.title {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+}
 .flex {
   display: flex;
 }
 .justify-center {
   justify-content: center;
 }
+.align-center {
+  align-items: center;
+}
 .fullWidth {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.btn {
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
 }
 .btn.main {
   background-color: #5cdbd3;
@@ -24680,6 +24722,30 @@ body {
 .btn.big {
   min-height: 2.8rem;
   min-width: 8.6rem;
+}
+.header {
+  background-color: white;
+  width: 100%;
+  height: 4rem;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px;
+  position: fixed;
+  padding: 0.7rem 2rem;
+}
+.header h3 {
+  margin: 0 0 0 0.5rem;
+}
+.header .icon {
+  width: 2.2rem;
+}
+@media (max-width: 959px) {
+  .header {
+    padding: 0.7rem 0;
+    justify-content: center;
+  }
+}
+.page-loader {
+  width: 100%;
+  height: 100%;
 }
 .error .img {
   width: 24rem;
@@ -24695,7 +24761,6 @@ body {
   margin: 0.4rem 0 2.4rem;
 }
 .error .error-block .title {
-  font-weight: 600;
   text-align: center;
   font-size: 1.8rem;
   margin: 0px 0px 1rem;
@@ -24706,7 +24771,8 @@ body {
   }
 }
 .error .error-block .description {
-  font-weight: 300;
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
   text-align: center;
   line-height: 1.8rem;
   font-size: 1rem;

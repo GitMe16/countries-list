@@ -1,7 +1,7 @@
-import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Loader } from 'components'
 import { PathItem, Paths } from 'constants/routes'
-
+import React, { Suspense } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import 'styles/css/app.css'
 
 const App: React.FunctionComponent<any> = () => {
@@ -14,9 +14,19 @@ const App: React.FunctionComponent<any> = () => {
           return (
             <Route
               exact={label === 'error-404' ? false : true}
+              key={label}
               path={path ? path : undefined}
             >
-              <Component />
+              <Suspense
+                fallback={
+                  <Loader
+                    className="page-loader flex align-center justify-center"
+                    size="large"
+                  />
+                }
+              >
+                <Component />
+              </Suspense>
             </Route>
           )
         })}
