@@ -2,16 +2,30 @@ import { Spin } from 'antd'
 import React from 'react'
 
 interface Props {
+  children?: React.ReactNode
   className?: string
-  size?: 'large' | 'small'
+  size?: 'small' | 'large' | 'default' | undefined
+  tip?: string
+  bottomClass?: string
 }
 
 const Loader: React.FunctionComponent<Props> = (props: Props) => {
-  const { className, size } = props
+  const { children, className, size, tip, bottomClass = '' } = props
 
   return (
     <div className={className}>
-      <Spin size={size} />
+      <div>
+        {
+          children
+            ? (
+              <div className="generic-spinner">
+                <Spin size={size} tip={tip} />
+              </div>
+            )
+            : <Spin size={size} tip={tip} />
+        }
+        {children ? children : null}
+      </div>
     </div>
   )
 }

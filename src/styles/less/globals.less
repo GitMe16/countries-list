@@ -7,6 +7,19 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+p, span, div {
+  .text, .description {
+    font-family: Quicksand, sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    @media (max-width: 599px) {
+      line-height: 1.4rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
 .flex {
   display: flex;
 }
@@ -62,4 +75,41 @@ h1, h2, h3, h4, h5, h6 {
 .page-loader {
   width: 100%;
   height: 100%;
+}
+
+.breadcrumbs {
+  & svg.icon {
+    width: 1rem;
+    max-height: 1rem; 
+  }
+}
+
+.main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+  .container {
+    height: 100%;
+    max-width: 100rem;
+    padding: 2rem;
+  }
+}
+
+.dashboard {
+  > h2.title {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+.generic-spinner {
+  display: flex;
+  justify-content: center;
+}
+
+.page-spinner {
+  color: @primary-color;
+  margin-top: 0.4rem;
 }

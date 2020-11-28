@@ -20,9 +20,14 @@ const App: React.FunctionComponent<any> = () => {
               <Suspense
                 fallback={
                   <Loader
+                    bottomClass="spinner-wrapper"
                     className="page-loader flex align-center justify-center"
                     size="large"
-                  />
+                  >
+                  <div className="page-spinner">
+                      Packing our bags...
+                    </div>
+                  </Loader>
                 }
               >
                 <Component />

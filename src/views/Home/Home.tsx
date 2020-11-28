@@ -1,12 +1,21 @@
+import { BreadItem, BreadcrumbSet, Dashboard } from 'components'
 import React from 'react'
-import { Header, Page } from 'components'
 
 const Home: React.FunctionComponent = () => {
+
+  const breadSlices: BreadItem[] = [
+    {
+      label: 'Home',
+    }
+  ]
+
   return (
-    <Page title="Home">
-      <Header />
-      {/* <div>This is the Home Page</div> */}
-    </Page>
+    <Dashboard
+      pageTitle="Discover new countries"
+      title="Home"
+    >
+      <BreadcrumbSet className="breadcrumbs" items={breadSlices} />
+    </Dashboard>
   )
 }
 

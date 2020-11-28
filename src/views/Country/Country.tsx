@@ -1,15 +1,26 @@
 import React from 'react'
 import { useParams } from 'react-router'
-import { Page } from 'components'
+import { BreadItem, BreadcrumbSet, Dashboard } from 'components'
+import { URLS } from 'constants/routes'
 
 const Country: React.FunctionComponent = () => {
   const params = useParams()
   console.log(params)
 
+  const breadSlices: BreadItem[] = [
+    {
+      label: 'Home',
+      href: URLS.Home,
+    },
+    {
+      label: 'Country Name',
+    }
+  ]
+
   return (
-    <Page title="Country Details">
-      This is country page
-    </Page>
+    <Dashboard pageTitle="Country Name" title="Country Details">
+      <BreadcrumbSet items={breadSlices} />
+    </Dashboard>
   )
 }
 

@@ -24695,6 +24695,28 @@ h6.title {
   font-family: Quicksand, sans-serif;
   font-weight: 700;
 }
+p .text,
+span .text,
+div .text,
+p .description,
+span .description,
+div .description {
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+  line-height: 1.8rem;
+  font-size: 1rem;
+}
+@media (max-width: 599px) {
+  p .text,
+  span .text,
+  div .text,
+  p .description,
+  span .description,
+  div .description {
+    line-height: 1.4rem;
+    font-size: 0.8rem;
+  }
+}
 .flex {
   display: flex;
 }
@@ -24747,6 +24769,34 @@ h6.title {
   width: 100%;
   height: 100%;
 }
+.breadcrumbs svg.icon {
+  width: 1rem;
+  max-height: 1rem;
+}
+.main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem);
+  overflow-y: auto;
+}
+.main .container {
+  height: 100%;
+  max-width: 100rem;
+  padding: 2rem;
+}
+.dashboard > h2.title {
+  margin-bottom: 0.5rem !important;
+}
+.generic-spinner {
+  display: flex;
+  justify-content: center;
+}
+.page-spinner {
+  color: #5cdbd3;
+  margin-top: 0.4rem;
+}
 .error .img {
   width: 24rem;
   display: block;
@@ -24771,17 +24821,7 @@ h6.title {
   }
 }
 .error .error-block .description {
-  font-family: Quicksand, sans-serif;
-  font-weight: 400;
   text-align: center;
-  line-height: 1.8rem;
-  font-size: 1rem;
-}
-@media (max-width: 599px) {
-  .error .error-block .description {
-    line-height: 1.4rem;
-    font-size: 0.8rem;
-  }
 }
 .error .btn {
   min-width: 10.4rem;
