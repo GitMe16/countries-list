@@ -16,7 +16,7 @@ export const Paths: {[index: string]: PathItem} = {
   },
   Country: {
     label: 'country',
-    path: '/country/:search',
+    path: '/country/:country',
     title: 'Country',
     component: lazy(() => import('views/Country')),
   },

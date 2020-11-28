@@ -5,7 +5,7 @@ import React from 'react'
 
 export interface BreadItem {
   href?: string
-  label: string
+  label: string | React.ReactNode
 }
 
 interface Props {
@@ -26,16 +26,8 @@ export const BreadcrumbSet: React.FunctionComponent<Props> = (props: Props) => {
     >
       {
         items.map((item: BreadItem) => (
-          <Breadcrumb.Item>
-            {
-              item?.href
-                ? (
-                  <a href={item.href}>
-                    {item.label}
-                  </a>
-                )
-                : item.label
-            }
+          <Breadcrumb.Item href={item?.href || ""}>
+            {item.label}
           </Breadcrumb.Item>
         ))
       }

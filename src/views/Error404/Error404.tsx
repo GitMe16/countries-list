@@ -25,7 +25,7 @@ const Error404: React.FunctionComponent = () => {
         </Typography>
         <div className="flex justify-center">
           <Button
-            className="btn big"
+            className="btn big main-color"
             type="primary"
             shape="round"
             size="large"

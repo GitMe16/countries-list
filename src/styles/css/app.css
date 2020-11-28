@@ -2278,10 +2278,12 @@ html {
   font-size: 14px;
   border-radius: 2px;
 }
-.ant-btn.main {
+.ant-btn.main-color {
   background-color: #5cdbd3;
   color: white;
-  padding: 8px 20px;
+}
+.ant-btn.main-color:hover {
+  background: #13c2c2;
 }
 .ant-btn.big {
   min-height: 2.8rem;
@@ -24675,6 +24677,9 @@ div.ant-typography-edit-content.ant-typography-rtl {
   src: url(assets/fonts/Quicksand/Quicksand-Bold.ttf);
   font-weight: 700;
 }
+::selection {
+  background: #13c2c2;
+}
 html,
 body {
   width: 100%;
@@ -24723,6 +24728,9 @@ div .description {
 .justify-center {
   justify-content: center;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .align-center {
   align-items: center;
 }
@@ -24736,14 +24744,24 @@ div .description {
   font-family: Quicksand, sans-serif;
   font-weight: 500;
 }
-.btn.main {
+.btn.main-color {
   background-color: #5cdbd3;
   color: white;
-  padding: 8px 20px;
+}
+.btn.main-color:hover {
+  background: #13c2c2;
 }
 .btn.big {
   min-height: 2.8rem;
   min-width: 8.6rem;
+}
+.icon-btn {
+  color: rgba(0, 0, 0, 0.45);
+}
+.icon-btn:hover,
+.icon-btn:focus {
+  color: #595959;
+  background-color: rgba(0, 0, 0, 0.08);
 }
 .header {
   background-color: white;
@@ -24759,6 +24777,10 @@ div .description {
 .header .icon {
   width: 2.2rem;
 }
+.header .mode-icon {
+  font-size: 1.2rem;
+  max-height: 1.2rem;
+}
 @media (max-width: 959px) {
   .header {
     padding: 0.7rem 0;
@@ -24768,6 +24790,9 @@ div .description {
 .page-loader {
   width: 100%;
   height: 100%;
+}
+.breadcrumbs.page {
+  margin-bottom: 1.2rem;
 }
 .breadcrumbs svg.icon {
   width: 1rem;
@@ -24787,7 +24812,7 @@ div .description {
   padding: 2rem;
 }
 .dashboard > h2.title {
-  margin-bottom: 0.5rem !important;
+  margin-bottom: 0.25rem;
 }
 .generic-spinner {
   display: flex;

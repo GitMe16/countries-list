@@ -1,11 +1,13 @@
+import { HomeOutlined } from '@ant-design/icons'
 import { BreadItem, BreadcrumbSet, Dashboard } from 'components'
 import React from 'react'
+import { CountriesList } from './components'
 
 const Home: React.FunctionComponent = () => {
 
   const breadSlices: BreadItem[] = [
     {
-      label: 'Home',
+      label: <HomeOutlined />,
     }
   ]
 
@@ -14,7 +16,8 @@ const Home: React.FunctionComponent = () => {
       pageTitle="Discover new countries"
       title="Home"
     >
-      <BreadcrumbSet className="breadcrumbs" items={breadSlices} />
+      <BreadcrumbSet className="breadcrumbs page" items={breadSlices} />
+      <CountriesList />
     </Dashboard>
   )
 }
