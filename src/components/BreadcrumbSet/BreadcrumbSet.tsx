@@ -1,7 +1,11 @@
 import { Breadcrumb } from 'antd'
 import Icon from '@ant-design/icons'
 import { ReactComponent as CaretRight } from 'assets/images/caret-right.svg'
+import clsx from 'clsx'
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { DisplayOptions } from 'store/displayMode/reducers'
+import { RootState } from 'store/reducers'
 
 export interface BreadItem {
   href?: string
@@ -16,17 +20,18 @@ interface Props {
 
 export const BreadcrumbSet: React.FunctionComponent<Props> = (props: Props) => {
   const { className = '', iconClass = '', items } = props
+  const displayMode = useSelector<RootState, DisplayOptions | null>((state) => state.DisplayMode.themeMode)
 
   return (
     <Breadcrumb
-      className={`breadcrumbs ${className}`}
+      className={clsx('breadcrumbs', className, {dark: displayMode === 'dark'})}
       separator={
-        <Icon component={CaretRight} className={`icon ${iconClass}`} />
+        <Icon component={CaretRight} className={clsx('icon', iconClass, {dark: displayMode === 'dark'})} />
       }
     >
       {
-        items.map((item: BreadItem) => (
-          <Breadcrumb.Item href={item?.href || ""}>
+        items.map((item: BreadItem, index: number) => (
+          <Breadcrumb.Item href={item?.href || ""} key={index}>
             {item.label}
           </Breadcrumb.Item>
         ))

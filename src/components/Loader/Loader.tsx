@@ -10,7 +10,7 @@ interface Props {
 }
 
 const Loader: React.FunctionComponent<Props> = (props: Props) => {
-  const { children, className, size, tip, bottomClass = '' } = props
+  const { children, className, size, tip, bottomClass = '' } = props //eslint-disable-line
 
   return (
     <div className={className}>

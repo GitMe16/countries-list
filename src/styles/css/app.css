@@ -2280,10 +2280,20 @@ html {
 }
 .ant-btn.main-color {
   background-color: #5cdbd3;
+  border: 1px solid #5cdbd3;
   color: white;
 }
 .ant-btn.main-color:hover {
   background: #13c2c2;
+  border: 1px solid #13c2c2;
+}
+.ant-btn.main-color.dark {
+  background-color: #138585;
+  border: 1px solid #138585;
+}
+.ant-btn.main-color.dark:hover {
+  background-color: #33bcb7;
+  border: 1px solid #33bcb7;
 }
 .ant-btn.big {
   min-height: 2.8rem;
@@ -24700,14 +24710,29 @@ h6.title {
   font-family: Quicksand, sans-serif;
   font-weight: 700;
 }
+h1.dark,
+h2.dark,
+h3.dark,
+h4.dark,
+h5.dark,
+h6.dark {
+  color: white;
+}
+p,
+span,
+div,
+a {
+  font-family: Quicksand, sans-serif;
+  font-weight: 400;
+}
 p .text,
 span .text,
 div .text,
+a .text,
 p .description,
 span .description,
-div .description {
-  font-family: Quicksand, sans-serif;
-  font-weight: 400;
+div .description,
+a .description {
   line-height: 1.8rem;
   font-size: 1rem;
 }
@@ -24715,9 +24740,11 @@ div .description {
   p .text,
   span .text,
   div .text,
+  a .text,
   p .description,
   span .description,
-  div .description {
+  div .description,
+  a .description {
     line-height: 1.4rem;
     font-size: 0.8rem;
   }
@@ -24740,16 +24767,29 @@ div .description {
   justify-content: center;
   align-items: center;
 }
+.fullWidth.dark {
+  background-color: #212121;
+}
 .btn {
   font-family: Quicksand, sans-serif;
   font-weight: 500;
 }
 .btn.main-color {
   background-color: #5cdbd3;
+  border: 1px solid #5cdbd3;
   color: white;
 }
 .btn.main-color:hover {
   background: #13c2c2;
+  border: 1px solid #13c2c2;
+}
+.btn.main-color.dark {
+  background-color: #138585;
+  border: 1px solid #138585;
+}
+.btn.main-color.dark:hover {
+  background-color: #33bcb7;
+  border: 1px solid #33bcb7;
 }
 .btn.big {
   min-height: 2.8rem;
@@ -24763,6 +24803,10 @@ div .description {
   color: #595959;
   background-color: rgba(0, 0, 0, 0.08);
 }
+.icon-btn:hover.dark,
+.icon-btn:focus.dark {
+  background-color: #595959;
+}
 .header {
   background-color: white;
   width: 100%;
@@ -24771,20 +24815,48 @@ div .description {
   position: fixed;
   padding: 0.7rem 2rem;
 }
+.header.dark {
+  background-color: #333333;
+}
 .header h3 {
   margin: 0 0 0 0.5rem;
 }
+@media (max-width: 599px) {
+  .header h3 {
+    font-size: 1.25rem;
+  }
+}
+.header .filler {
+  display: none;
+}
+@media (max-width: 959px) {
+  .header .filler {
+    display: block;
+  }
+}
 .header .icon {
   width: 2.2rem;
+}
+@media (max-width: 599px) {
+  .header .icon {
+    width: 1.8rem;
+  }
 }
 .header .mode-icon {
   font-size: 1.2rem;
   max-height: 1.2rem;
 }
-@media (max-width: 959px) {
+.header .mode-icon.dark {
+  color: white;
+}
+@media (min-width: 600px) and (max-width: 959px) {
   .header {
-    padding: 0.7rem 0;
-    justify-content: center;
+    padding: 0.7rem 1rem;
+  }
+}
+@media (max-width: 599px) {
+  .header {
+    padding: 0.7rem 0.5rem;
   }
 }
 .page-loader {
@@ -24798,6 +24870,12 @@ div .description {
   width: 1rem;
   max-height: 1rem;
 }
+.breadcrumbs svg.icon.dark {
+  color: white;
+}
+.breadcrumbs svg.icon.dark:hover {
+  color: #33bcb7;
+}
 .main {
   position: absolute;
   bottom: 0;
@@ -24805,6 +24883,9 @@ div .description {
   width: 100%;
   height: calc(100% - 4rem);
   overflow-y: auto;
+}
+.main.dark {
+  background: #212121;
 }
 .main .container {
   height: 100%;
@@ -24821,6 +24902,20 @@ div .description {
 .page-spinner {
   color: #5cdbd3;
   margin-top: 0.4rem;
+}
+.country-detail a .dark {
+  color: white;
+}
+.country-detail a .dark:hover {
+  color: #33bcb7 !important;
+}
+.country-detail .icon.dark {
+  color: white;
+}
+.country-detail .flag-icon {
+  font-size: 1rem;
+  margin-right: 0.28rem;
+  max-height: 1rem;
 }
 .error .img {
   width: 24rem;
@@ -24846,7 +24941,11 @@ div .description {
   }
 }
 .error .error-block .description {
+  color: rgba(0, 0, 0, 0.45);
   text-align: center;
+}
+.error .error-block .description.dark {
+  color: white;
 }
 .error .btn {
   min-width: 10.4rem;
@@ -24860,4 +24959,10 @@ div .description {
   .error {
     padding: 0 20px;
   }
+}
+.home .icon.dark {
+  color: white;
+}
+.home .icon.dark:hover {
+  color: #33bcb7;
 }

@@ -1,11 +1,17 @@
+import { Actions } from 'store'
 import { Loader } from 'components'
 import { PathItem, Paths } from 'constants/routes'
 import React, { Suspense } from 'react'
+import { useDispatch } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import 'styles/css/app.css'
 
 const App: React.FunctionComponent<any> = () => {
+  const dispatch = useDispatch()
   const routes = Object.values(Paths)
+
+  dispatch(Actions.DisplayMode.init())
+
   return (
     <BrowserRouter>
       <Switch>

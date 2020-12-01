@@ -1,6 +1,10 @@
 import { Typography } from 'antd'
+import clsx from 'clsx'
 import { Header, Page } from 'components'
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { DisplayOptions } from 'store/displayMode/reducers'
+import { RootState } from 'store/reducers'
 
 interface Props {
   children: React.ReactNode
@@ -16,16 +20,17 @@ const Dashboard: React.FunctionComponent<Props> = (props: Props) => {
     pageTitle, title, titleClass = '',
   } = props
   const { Title } = Typography
+  const displayMode = useSelector<RootState, DisplayOptions | null>((state) => state.DisplayMode.themeMode)
 
   return (
     <Page title={title}>
       <Header />
-      <div className="main">
-        <div className={`container ${containerClass} dashboard`}>
+      <div className={clsx('main', {dark: displayMode === 'dark'})}>
+        <div className={clsx('container', containerClass, 'dashboard')}>
           {pageTitle && (
             <Title
               level={2}
-              className={`title ${titleClass}`}
+              className={clsx('title', titleClass, {dark: displayMode === 'dark'})}
             >
               { pageTitle }
             </Title>
